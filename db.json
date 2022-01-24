@@ -31,6 +31,14 @@
       "year": 2010,
       "quantity": "4",
       "imageURL": "/assets/warp.jpeg"
+    },
+    {
+      "id": 5,
+      "title": "QA Testing Personified",
+      "year": 2022,
+      "quantity": "27",
+      "imageURL": "/assets/testing-trends-world-quality-report.jpeg",
+      "description": "A book about QA testing e2e"
     }
   ]
 }

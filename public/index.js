@@ -6,6 +6,23 @@ async function main() {
     books.forEach(renderBook)
 }
 
+async function updateBookTitle() {
+    let response = await fetch('http://localhost:3001/updateBook', {
+        method: "PATCH",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          "id": 3,
+          "title": "Legends of Arathrae"
+        })
+      });
+
+    let book = await response.json()
+
+    book.renderBook
+}
+
 function renderBook(book) {
     let bookContainer = document.querySelector('.book-container')
     bookContainer.innerHTML += `
@@ -25,4 +42,4 @@ function renderBook(book) {
     `
 }
 
-main()
+main();
